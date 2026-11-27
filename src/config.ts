@@ -77,9 +77,9 @@ export const config = {
       type: 'Akad Nikah',
       name: 'Ijab Kabul',
       date: 'Sabtu, 09 Januari 2027',
-      time: '08.00 – 10.00 WIB',
+      time: '10.00 – 12.00 WIB',
       venue: 'Rumah Mempelai Wanita',
-      address: 'Rumah Tiga Ruang No.21 RT.2 RW.6',
+      address: 'Rumah Tiga Ruang No.21 RT.2 RW.6 Kelurahan Anduring Kota Padang',
       /** URL Google Maps lokasi. Kosongkan untuk menyembunyikan tombol. */
       mapsUrl: 'https://maps.app.goo.gl/PjrRFnE6G68qwuwC8',
     },
@@ -90,7 +90,7 @@ export const config = {
       date: 'Sabtu, 09 Januari 2027',
       time: '10.00 WIB – Selesai',
       venue: 'Rumah Mempelai Wanita',
-      address: 'Rumah Tiga Ruang No.21 RT.2 RW.6',
+      address: 'Rumah Tiga Ruang No.21 RT.2 RW.6 Kelurahan Anduring Kota Padang',
       mapsUrl: 'https://maps.app.goo.gl/PjrRFnE6G68qwuwC8',
     },
     {
@@ -100,7 +100,7 @@ export const config = {
       date: 'Minggu, 17 Januari 2027',
       time: '10.00 WIB – Selesai',
       venue: 'Rumah Mempelai Pria',
-      address: 'Rimbo Data RT.1 RW.2 Bandar Buat',
+      address: 'Rimbo Data RT.1 RW.2 Kelurahan Bandar Buat Kota Padang',
       mapsUrl: 'https://maps.app.goo.gl/hn3jbeYE9Cokt9nb6',
     },
   ],
@@ -160,6 +160,6 @@ export const config = {
   footer: {
     closing:
       "Merupakan suatu kehormatan dan kebahagiaan bagi kami\napabila Bapak/Ibu/Saudara/i berkenan hadir\ndan memberikan doa restu.\n\nWassalamu'alaikum Warahmatullahi Wabarakatuh.",
-    madeBy: 'Made by — Harry Rahmadi Munly',
+    madeBy: 'Made by — Harry RM',
   },
 } as const;
