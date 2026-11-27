@@ -18,7 +18,13 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Raleway', sans-serif;
-  background: var(--ivory);
+  background-color: var(--ivory);
+  background-image:
+    linear-gradient(rgba(250,247,242,0.72), rgba(250,247,242,0.72)),
+    url('/bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   color: var(--text);
   overflow-x: hidden;
 }
