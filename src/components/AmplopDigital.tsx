@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
 import { config } from '../config';
 
-type Tab = 'bank' | 'kado';
+type Tab = 'bank' | 'qris' | 'kado';
 
 function CopyButton({ copyValue, label }: { copyValue: string; label: string }) {
   const [copied, setCopied] = useState(false);
@@ -31,6 +31,7 @@ export default function AmplopDigital() {
 
   const tabs: { id: Tab; label: string }[] = [
     { id: 'bank', label: 'Transfer Bank' },
+    ...(gift.qrisUrl ? [{ id: 'qris' as Tab, label: 'QRIS' }] : []),
     { id: 'kado', label: 'Kado Fisik' },
   ];
 
@@ -72,6 +73,16 @@ export default function AmplopDigital() {
           </div>
         ))}
       </div>
+
+      {/* Panel: QRIS */}
+      {gift.qrisUrl && (
+        <div className={`gift-panel${activeTab === 'qris' ? ' active' : ''}`}>
+          <div className="qris-box">
+            <img src={gift.qrisUrl} alt="QRIS" className="qris-image" />
+            <p className="qris-label">Scan QR code di atas untuk membayar via e-wallet / m-banking apapun</p>
+          </div>
+        </div>
+      )}
 
       {/* Panel: Kado Fisik */}
       <div className={`gift-panel${activeTab === 'kado' ? ' active' : ''}`}>

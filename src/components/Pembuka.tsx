@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useFadeUp } from '../hooks/useFadeUp';
+import { useCountdown } from '../hooks/useCountdown';
 import { config } from '../config';
 
 function HeroSlider({ slides }: { slides: readonly string[] }) {
@@ -48,6 +49,13 @@ export default function Pembuka() {
   const ref = useFadeUp<HTMLElement>();
   const { opening } = config;
   const slides = config.photos.slides;
+  const { days, hours, minutes, seconds } = useCountdown(config.countdown.targetDate);
+  const countdownItems = [
+    { value: days,    label: 'Hari' },
+    { value: hours,   label: 'Jam' },
+    { value: minutes, label: 'Menit' },
+    { value: seconds, label: 'Detik' },
+  ];
 
   return (
     <section ref={ref} className="section fade-up">
@@ -57,12 +65,26 @@ export default function Pembuka() {
         <em>Kebahagiaan</em>
       </div>
       <div className="ornament">✦  ✦  ✦</div>
+      <div className="countdown-wrap" style={{ marginBottom: '2rem' }}>
+        {countdownItems.map((item, i) => (
+          <div key={item.label} style={{ display: 'contents' }}>
+            <div className="countdown-item">
+              <div className="countdown-num">{item.value}</div>
+              <div className="countdown-label">{item.label}</div>
+            </div>
+            {i < countdownItems.length - 1 && (
+              <div className="countdown-sep">:</div>
+            )}
+          </div>
+        ))}
+      </div>
       <div className="hero-frame">
         <div className="hero-corner tl" />
         <div className="hero-corner tr" />
         <div className="hero-corner bl" />
         <div className="hero-corner br" />
         <div className="hero-bismillah">{opening.bismillah}</div>
+        <p className="hero-verse-arabic">{opening.verseArabic}</p>
         <HeroSlider slides={slides} />
         <p className="hero-verse">
           {opening.verse}

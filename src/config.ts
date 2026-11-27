@@ -19,12 +19,13 @@ export const config = {
      * Letakkan file mp3 di folder public/, lalu isi '/nama-file.mp3'.
      * Kosongkan string untuk menonaktifkan tombol musik.
      */
-    musicUrl: '',
+    musicUrl: 'music.mp3',
   },
 
   // ── Pembuka ───────────────────────────────────────────────────
   opening: {
     bismillah: 'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم',
+    verseArabic: 'وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ',
     verse: '"Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."',
     verseSource: '— QS. Ar-Rum: 21',
   },
@@ -118,6 +119,13 @@ export const config = {
     description:
       'Doa restu Anda adalah hadiah terindah bagi kami.\nNamun jika Anda ingin berbagi kebahagiaan, berikut informasinya.',
 
+    /**
+     * URL gambar QRIS (jpg/png).
+     * Letakkan file di public/ atau gunakan URL eksternal.
+     * Kosongkan string untuk menyembunyikan tab QRIS.
+     */
+    qrisUrl: 'Qris.jpeg',
+
     /** Rekening bank. Tambah/hapus object sesuai kebutuhan. */
     bankAccounts: [
       {
@@ -152,6 +160,6 @@ export const config = {
   footer: {
     closing:
       "Merupakan suatu kehormatan dan kebahagiaan bagi kami\napabila Bapak/Ibu/Saudara/i berkenan hadir\ndan memberikan doa restu.\n\nWassalamu'alaikum Warahmatullahi Wabarakatuh.",
-    madeBy: 'Made by — Harry',
+    madeBy: 'Made by — Harry Rahmadi Munly',
   },
 } as const;

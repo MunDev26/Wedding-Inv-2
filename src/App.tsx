@@ -4,7 +4,6 @@ import Cover from './components/Cover';
 import Pembuka from './components/Pembuka';
 import Pengantin from './components/Pengantin';
 import Acara from './components/Acara';
-import Countdown from './components/Countdown';
 import AmplopDigital from './components/AmplopDigital';
 import Footer from './components/Footer';
 import MusicButton from './components/MusicButton';
@@ -69,7 +68,6 @@ export default function App() {
         <Pembuka />
         <Pengantin />
         <Acara />
-        <Countdown />
         <AmplopDigital />
         <Footer />
       </div>
