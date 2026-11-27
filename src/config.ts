@@ -29,13 +29,29 @@ export const config = {
     verseSource: '— QS. Ar-Rum: 21',
   },
 
+  // ── Foto ──────────────────────────────────────────────────────
+  photos: {
+    /** Foto background halaman cover */
+    cover: '/foto/Foto_Pembuka.JPG',
+    /** Foto profil mempelai pria */
+    groom: '/foto/Foto_Pria.JPG',
+    /** Foto profil mempelai wanita */
+    bride: '/foto/Foto_Wanita.JPG',
+    /** Slide foto di section pembuka (3 foto) */
+    slides: [
+      '/foto/Slide_1.JPG',
+      '/foto/Slide_2.JPG',
+      '/foto/Slide_3.JPG',
+    ],
+  },
+
   // ── Data Mempelai ─────────────────────────────────────────────
   couple: {
     groom: {
       nickname: 'Tio',
       fullName: 'Martio Hirvino',
       degree: 'S.T.',
-      /** Huruf awal untuk avatar */
+      /** Huruf awal untuk avatar (fallback jika foto tidak ada) */
       initial: 'T',
       /** "Putra pertama / kedua / ketiga dari" */
       position: 'Putra pertama dari',
